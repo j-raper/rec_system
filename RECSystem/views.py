@@ -26,6 +26,14 @@ def submit_certification(request):
 
 # Create-Account Page
 def createAcc(request):
+    if request.method == 'POST':
+        new_pass = request.POST['new_pass']
+        confirm_pass = request.POST['confirm_pass']
+        if new_pass == confirm_pass:
+            messages.success(request, 'You successfully created an account. You can now login.')
+            return render(request, 'createAcc.html')
+        else:
+            messages.error(request, 'Password and Confirm Password do not match. Please try again.')
     return render(request, 'createAcc.html')
 # Forgot-Password Page
 def forgotPass(request):
