@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("/static/images/uic-background.jpg") fixed;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    background-color:#CD104D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    height: 90px;
+}
+.header #icons{
+    height: 50px;
+    justify-content: space-between 100px;
+}
+.header .menus{
+    color: whitesmoke;
+    text-decoration-line: none;
+    font-weight: bolder;
+    word-spacing: 40px;
+}
+.header .menus:hover{
+    color: black;
+    text-decoration-line: none;
+    font-weight: bolder;
+    word-spacing: 40px;
+}
+.header .navbar a {
+    font-size: 22px;
+    margin-left: 2rem;
+}
+#cntctUs span{
+    margin-left: 10px;
+}
+
+/* Steps */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid lightslategray;
+    background-color: #f3f3f3;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 2px solid lightslategray;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #F2ACB9;
+}
+.active{
+    background-color: #e35b89;
+}
+li .active{
+    color: black;
+}
+.container{
+    position: fixed;
+    top: 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+.container span{
+    font-weight: bolder;
+}
+.cert_container{
+    position: fixed;
+    top: 245px;
+    align-items: center;
+    border-radius: 6px;
+    justify-content: space-between;
+    border: 1px solid lightslategray;
+    background-color: lightpink;
+    height: 53%;
+    padding: 3%;
+    width: 50%;
+}
+.cert_container .input_box{
+    height: 30px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+}
+.cert_container .input_box input{
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 15px;
+    background-color: #fff;
+    border: 2px solid lightslategray;
+    transition: all 0.3s ease;
+}
+.cert_container .file_box_upload label{
+    left: 18px;
+    top: 50%;
+    font-size: 16px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form > .form_section {
+    display: flex;
+    flex-direction: row;
+}
+form > .form_section .files_container,
+form > .form_section .files_container {
+    padding: 1.3rem;
+}
+form > .form_section .files_container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid #e35b89;
+}
+form > .form_section .files_container {
+    display: table-row-group;
+    align-items: center;
+    padding: 70px;
+}
+form > .form_section .upload_container,
+form > .form_section .upload_container {
+    padding: 1.3rem;
+}
+form > .form_section .upload_container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -72px;
+}
+form > .form_section .upload_container {
+    display: table-row-group;
+    align-items: center;
+    padding: 70px;
+}
+.input_box #textarea {
+    width: 473px;
+    height: 156px;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 15px;
+    background-color: #fff;
+    border: 2px solid lightslategray;
+    transition: all 0.3s ease;
+    margin-left: 197px;
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+.input_label{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #636c72;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    margin-left: 190px;
+    margin-top: 5px;
+}
+.input_label:hover{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: white;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    margin-left: 190px;
+    margin-top: 5px;
+}
+#researcher_label{
+    margin-top: 10px;
+    font-size: 13px;
+    color: transparent;
+}
+#title_label{
+    font-size: 13px;
+    color: transparent;
+}
+.file_box{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.file_box_upload{
+    margin-bottom: 8px;
+    font-size: 18px;
+    margin-top: 50px;
+}
+p{
+    margin-top: 24px;
+    margin-bottom: -11px;
+    margin-left: 2px;
+}
+#forms{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: -30px;
+    font-size: 20px;
+    color: #e35b89;
+    font-weight: bold;
+}
+.submit{
+    display: inline-block;
+    padding: 7px 77px;
+    border: 0.2rem solid #FCD1D1;
+    background-color: #B91646;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 15px;
+    width: 100%;
+}
+.submit:hover{
+    background-color: #FCD1D1;
+    border: 0.2rem solid #B91646;
+    color: #B91646;
+}
+h3{
+    padding: 28px;
+    font-family: inherit;
+    font-style: oblique;
+    font-weight: initial;
+}
+h6{
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
