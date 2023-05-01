@@ -1,0 +1,40 @@
+<!-- LOGIN PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIC REC - Home</title>
+
+    <link rel="stylesheet" href="../../static/css/researcher/home.css">
+</head>
+
+<!-- home section start -->
+{% load static %}
+<body>
+    <header>
+        <div class="header">
+            <nav class="navbar">
+                <a href="{% url 'home' %}" class="menus">Home</a>
+                <a href="" class="menus">About</a>
+                <a href="" class="menus" id="cntctUs">Contact<span>Us</span></a>
+            </nav>
+            <div class="icons">
+                <img src="../static/images/notification-icon.png" alt="" id="icons">
+                <img src="../static/images/user-icon.png" alt="" id="icons">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <a href="{% url 'basic-requirements' %}">
+            <img src="../static/images/submit.png" alt="Submit Manuscript">
+            <h3>Submit Manuscript for Ethics Review</h3>
+        </a>
+        <a href="#">
+            <img src="../static/images/find.png" alt="Find/Check Manuscript">
+            <h3>Check Status of Manuscript</h3>
+        </a>
+    </div>
+</body>
+</html>

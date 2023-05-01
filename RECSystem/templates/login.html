@@ -1,0 +1,45 @@
+<!-- LOGIN PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIC REC</title>
+
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+
+<!-- home section start -->
+{% load static %}
+<body>
+    <div class="container">
+        {% include 'RECSystem/includes/message.html' %}
+        <div class="login">
+            <div class="logo-box">
+                <img src="{% static 'images/logo.png' %}" alt="uic-logo" id="logo">
+                <h2 class="rec-text"><span>R</span>esearch <span>E</span>thics <span>C</span>ommittee  <br>Information System</h2>        
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-box" id="username-input">
+                    <input type="text" name="username" autocomplete="off" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box" id="password-input">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <input type="submit" value="Submit">
+                </div> 
+                <div class="anchor">
+                    <a href="{% url 'create-account' %}" id="create-account">Create Account</a> <br><br>
+                    <a href="{% url 'forgot-password' %}" id="forgot-password">Forgot Password?</a>
+                </div> 
+            </form>
+        </div>
+    </div>
+<!-- home section end -->
+</body>
+</html>

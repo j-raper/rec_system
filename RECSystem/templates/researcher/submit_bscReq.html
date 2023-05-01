@@ -1,0 +1,84 @@
+<!-- LOGIN PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIC REC - Home</title>
+
+    <link rel="stylesheet" href="../../static/css/researcher/submit_bscReq.css">
+</head>
+
+<!-- home section start -->
+{% load static %}
+<body>
+  <header>
+      <div class="header">
+          <nav class="navbar">
+              <a href="{% url 'home' %}" class="menus">Home</a>
+              <a href="" class="menus">About</a>
+              <a href="" class="menus" id="cntctUs">Contact<span>Us</span></a>
+          </nav>
+          <div class="icons">
+              <img src="../static/images/notification-icon.png" alt="" id="icons">
+              <img src="../static/images/user-icon.png" alt="" id="icons">
+          </div>
+      </div>
+  </header>
+  <div class="container">
+    <ul>
+      <li><a href="#" class="active"><span>1</span> Basic Requirements</a></li>
+      <li><a href="{% url 'rec-requirements' %}"><span>2</span> REC Requirements</a></li> 
+      <li><a href="{% url 'payment' %}"><span>3</span> Payment</a></li>
+      <li><a href="{% url 'feedback' %}"><span>4</span> Feedback</a></li>
+      <li><a href="{% url 'certification' %}"><span>5</span> Ethics Compliance Certificate</a></li>
+    </ul>
+  </div>
+  <div class="form_container">
+  {% include 'RECSystem/includes/message.html' %}
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form_section">
+        <div class="input_container">
+          <div class="input_box">
+            <label for="protocol_code">Protocol Code: </label>
+            <input type="text" id="input_text" name="protocol_code" value="Leave it blank" required>
+          </div>
+          <div class="input_box">
+            <label for="protocol_title">Protocol Title: </label>
+            <input type="text" id="input_text" name="protocol_title" required>
+            <label class="input_label" id="title_label" name="protocol_title" >Title of the study</label>
+          </div>
+          <div class="input_box">
+            <label for="principal_investigator">Principal Investigator(s): </label>
+            <textarea name="principal_investigator" id="textarea" cols="30" rows="10"spellcheck="false" required></textarea>            
+            <label class="input_label" id="researcher_label" >Researcher(s)</label></div>
+        </div>
+        <div class="files_container">
+          <p>Attachments</p>
+          <div class="file_box">
+            <label for="minutes_of_proposal">Minutes of proposal defense <br></label>
+            <input type="file" name="minutes_of_proposal" id="input_file" required>
+          </div>
+          <div class="file_box">
+            <label for="revised_copy">Revised copy of the Manuscript <br></label>
+            <input type="file" name="revised_copy" id="input_file" required>
+          </div>
+          <div class="file_box">
+            <label for="routing_form">Routing Form <br></label>
+            <input type="file" name="routing_form" id="input_file" required>
+          </div>
+          <div class="file_box">
+            <label for="adviser_edorsement">Adviser's Endorsement for Ethics Review <br></label>
+            <input type="file" name="adviser_edorsement" id="input_file" required> 
+          </div>
+          <div class="button">
+            <input class="submit" type="submit" value="Submit for review">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

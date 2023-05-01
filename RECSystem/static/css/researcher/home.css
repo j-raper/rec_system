@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("/static/images/uic-background.jpg") fixed;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    background-color:#CD104D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    height: 90px;
+}
+.header #icons{
+    height: 50px;
+    justify-content: space-between 100px;
+}
+.header .menus{
+    color: whitesmoke;
+    text-decoration-line: none;
+    font-weight: bolder;
+    word-spacing: 40px;
+}
+.header .menus:hover{
+    color: black;
+    text-decoration-line: none;
+    font-weight: bolder;
+    word-spacing: 40px;
+}
+.header .navbar a {
+    font-size: 22px;
+    margin-left: 2rem;
+}
+#cntctUs span{
+    margin-left: 10px;
+}
+.container{
+    position: fixed;
+    top: 265px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+.container img{
+    height: 300px;
+    margin: 100px;
+    margin-bottom: 25px;
+}
+.container a{
+    text-decoration-line: none;
+}
+h3{
+    color: black;
+    justify-content: center;
+    margin-left: 100px;
+}
+h3:hover{
+    color: red;
+}
+
