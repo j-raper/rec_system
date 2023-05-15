@@ -8,6 +8,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('', views.user_login, name='login'),
     path('home/', views.home, name='home'),
+    path('aboutUs/', views.aboutUs, name='aboutUs'),
+    path('contactUs/', views.contactUs, name='contactUs'),
+    path('profile/', views.icon, name='icon'),
+    path('successful/', views.successful, name='successful'),
+    path('profile/change-password', views.changePass, name='change-password'),
     path('submit-manuscript/basic-requirements', views.submit_bscReq, name='basic-requirements'),
     path('submit-manuscript/rec-requirements', views.submit_recReq, name='rec-requirements'),
     path('submit-manuscript/payment', views.submit_payment, name='payment'),
@@ -16,8 +21,7 @@ urlpatterns = [
     path('create-account/', views.createAcc, name='create-account'),
     path('forgot-password/', views.forgotPass, name='forgot-password'),
     path('forgot-password/code-verification/', views.codeVerify, name='code-verification'),
-    path('forgot-password/change-password/', views.changePass, name='change-password'),
-    
+    path('forgot-password/new-password/', views.newPass, name='new-password'),
 ]
 
 # define url static files

@@ -1,0 +1,147 @@
+{% load static %}
+{% include 'RECSystem/includes/message.html' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Researcher Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+          }
+          body {
+            background: url("/static/images/uic-background.jpg") fixed;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 90px; /* add padding to push content below header */
+          }
+          .header {
+            background-color: #CD104D;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 9%;
+            height: 90px;
+          }
+          .header #icons {
+            height: 50px;
+            justify-content: space-between 100px;
+          }
+          .header .menus {
+            color: whitesmoke;
+            text-decoration-line: none;
+            font-weight: bolder;
+            word-spacing: 40px;
+          }
+          .header .menus:hover {
+            color: black;
+            text-decoration-line: none;
+            font-weight: bolder;
+            word-spacing: 40px;
+          }
+          .header .navbar a {
+            font-size: 22px;
+            margin-left: 2rem;
+          }
+          #cntctUs span {
+            margin-left: 10px;
+          }
+          table {
+            margin: 150px auto; /* add margin to center table and give space between header and table */
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 850px;
+          }
+          th,
+          td {
+            text-align: center;
+            padding: 8px;
+          }
+          th {
+            background-color: #CD104D;
+            color: white;
+            font-weight: bolder;
+          }
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+            font-weight: bold;
+          }
+          h1 {
+            text-align: center; /* center h1 */
+            margin-top: 10px; /* add margin to give space between header and h1 */
+            margin-left: 20px;
+            text-decoration: underline;
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          button {
+              background-color: #CD104D;
+              color: white;
+              font-weight: bolder;
+              text-align: center;
+              padding: 10px;
+              position: fixed;
+              bottom: 150px;
+              right: 350px;
+              font-size: large;
+              text-decoration: none;
+          }
+          button a {
+            color:inherit;
+            text-decoration: none;
+          }
+      </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <nav class="navbar">
+          <a href="{% url 'home' %}" class="menus">Home</a>
+          <a href="{% url 'aboutUs' %}" class="menus">About</a>
+          <a href="{% url 'contactUs' %}" class="menus" id="cntctUs">Contact<span>Us</span></a>
+      </nav>
+        <div class="icons">
+          <img src="../static/images/notification-icon.png" alt="" id="icons">
+          <a href="{% url 'icon' %}">
+            <img src="../static/images/user-icon.png" alt="" id="icons">
+          </a>
+        </div>
+      </div>
+    </header>
+    <br/>
+    <h1>Researcher Profile</h1>
+    <br/>
+    <table>
+      <tr>
+        <th>Username</th>
+        <th>Researcher Email</th>
+        <th>Researcher School</th>
+        <th>Researcher Level</th>
+      </tr>
+      {% for researcher in user %}
+      <tr>
+        <td>{{ researcher.username }}</td>
+        <td>{{ researcher.email }}</td>
+        <td>{{ researcher.school }}</td>
+        <td>{{ researcher.level }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+        <button type="button">
+            <a href="{% url 'newPass' %}">Change Password</a>
+        </button>
+  </body>
+</html>

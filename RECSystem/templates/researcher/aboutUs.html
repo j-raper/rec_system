@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIC REC - About Us</title>
+
+    <link rel="stylesheet" href="../../static/css/researcher/aboutUs.css">
+</head>
+
+<!-- about us section start -->
+{% load static %}
+<body>
+    <header>
+        <div class="header">
+            <nav class="navbar">
+                <a href="{% url 'home' %}" class="menus">Home</a>
+                <a href="{% url 'aboutUs' %}" class="menus">About</a>
+                <a href="{% url 'contactUs' %}" class="menus" id="cntctUs">Contact<span>Us</span></a>
+            </nav>
+            <div class="icons">
+                <a href="{% url 'icon' %}">
+                    <img src="../static/images/user-icon.png" alt="" id="icons">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="form_container">
+        <h1>About UIC REC</h1>
+        <p>
+            The <span>Research Ethics Committee </span> is a board of the University of the Immaculate Conception appointed to review research proposals to formally asses if the paper submitted is indeed ethical. This is to confirm that the researchers are adhering to the recognized ethical standards, which include respecting the dignity, rights, safety, and well-being of the people or any organizations that take part in the research. The Committee itself was established on June 24, 2015, with the main goal to integrate all existing ethics committees in the university under a single institutional research ethics committee with component review panels, and guided by a unified set of standard operating procedures.
+            This organization was chosen in order to further modernize and streamline the process, making the overall workflow more efficient for both the Committee and the researchers themselves.
+            <br>
+            <br>
+            <span>Vision</span>  
+            <br>
+            A globally recognized Catholic university
+            that nurtures faith, builds passion for excellence and
+            develops lifelong learners with compassion for service
+            that impacts transformation in a fast-changing society.
+            <br>
+            <br>
+            <span>Mission</span> 
+            <br>
+            We commit ourselves to
+            provide an excellent educational experience to students to help them become globally competitive and adaptive to change;
+            inculcate among students the values of serving others with humility and love, working for justice, promoting peace, and preserving the integrity of creation;
+            engage in research activities in collaboration with local, regional, national and international partners;
+            uphold the dignity of the persons especially the poor;
+            promote and strengthen our Filipino culture and values; and
+            administer the university following Catholic doctrine.
+        </p>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: url("/static/images/uic-background.jpg") fixed;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  background-color:#CD104D;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  height: 90px;
+}
+.header #icons{
+  height: 50px;
+  justify-content: space-between 100px;
+}
+.header .menus{
+  color: whitesmoke;
+  text-decoration-line: none;
+  font-weight: bolder;
+  word-spacing: 40px;
+}
+.header .menus:hover{
+  color: black;
+  text-decoration-line: none;
+  font-weight: bolder;
+  word-spacing: 40px;
+}
+.header .navbar a {
+  font-size: 22px;
+  margin-left: 2rem;
+}
+.container{
+  position: fixed;
+  top: 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+.container span{
+  font-weight: bolder;
+}
+.form_container{
+  position: fixed;
+  top: 160px;
+  align-items: center;
+  border-radius: 6px;
+  justify-content: space-between;
+  border: 1px solid lightslategray;
+  background-color: whitesmoke;
+  height: 70%;
+  padding-top: 1%;
+}
+.form_container .input_box{
+  height: 30px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+.form_container .input_box input{
+  height: 40px;
+  width: 70%;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding-left: 15px;
+  background-color: #fff;
+  border: 2px solid lightslategray;
+  transition: all 0.3s ease;
+  margin-left: 198px;
+}
+.form_container .input_box label{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  font-size: 16px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form > .form_section {
+  display: flex;
+  flex-direction: row;
+}
+form > .form_section .input_container,
+form > .form_section .files_container {
+  padding: 1.3rem;
+}
+
+form > .form_section .files_container {
+  display: table-row-group;
+  align-items: center;
+  padding: 70px;
+}
+p{
+  text-align: center;
+  letter-spacing: 1px;  
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.input_box #textarea {
+  width: 473px;
+  height: 156px;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding-left: 15px;
+  background-color: #fff;
+  border: 2px solid lightslategray;
+  transition: all 0.3s ease;
+  margin-left: 197px;
+  margin-top: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+.submit{
+  display: inline-block;
+  padding: 7px 77px;
+  border: 0.2rem solid #FCD1D1;
+  background-color: #B91646;
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 85px;
+  width: 100%;
+}
+.submit:hover{
+  background-color: #FCD1D1;
+  border: 0.2rem solid #B91646;
+  color: #B91646;
+}
+h1{
+  margin-top: 15px;
+  margin-left: 40px;
+  font-size: 35px;
+  color: #e35b89;
+  font-weight: bold;
+}

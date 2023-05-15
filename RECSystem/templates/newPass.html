@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<!-- Created By jpornillos source  -->
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
       <title>UIC REC - Recover Password</title>
 
-      <link rel="stylesheet" href="../../static/css/codeVerify.css">
+      <link rel="stylesheet" href="../../static/css/newPass.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    <body>
       <div class="wrapper">
+         {% include 'RECSystem/includes/message.html' %}
          <div class="title-text">
-            <div class="title signup-researcher">Code Verification</div>
+            <div class="title signup-researcher">New Password</div>
          </div>
          <div class="form-container">
             <div class="form-inner">
-               <form action="#" class="code-verification">
-                    <h5 id="label-name">Enter OTP Code</h5>
-                    <div class="field">
-                        <input type="text" placeholder="OTP Code" required>
-                    </div>
-                    <div class="field btn">
-                        <div class="btn-layer"></div>
-                        <a href="{% url 'new-password' %}" type="submit">Submit</a>
-                    </div>
+               <form action="#" class="code-verification" method="post">
+                  {% csrf_token %}
+                  <h5 id="label-name">Create New Password</h5>
+                  <div class="field">
+                     <input type="password" placeholder="Enter New Password" name="new_pass" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm New Password" name="confirm_new_pass" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Change" id="sub-btn">
+                  </div>
+                  <div class="loginBtn">
+                     <a href="{% url 'login' %}" class="login">&laquo; Login</a>
+                  </div>
                </form>
             </div>
          </div>
       </div>
+      <!-- loader  -->
+      <!-- <div class="loader-container" role="status">
+         <img  src="../static/images/Spinner-1s-200px.gif" alt="" >
+      </div> -->
       <script>
         const researcherText = document.querySelector(".title-text .signup-researcher");
         const researcherForm = document.querySelector("form.signup-researcher");
@@ -47,5 +58,6 @@
           return false;
         });
      </script>
+     <script src="../static/js/loader.js"></script> 
    </body>
 </html>

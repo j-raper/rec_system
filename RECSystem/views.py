@@ -37,7 +37,47 @@ def user_login(request):
     
 # Home Page
 def home(request):
-    return render(request, 'researcher\home.html') 
+    return render(request, 'researcher\home.html')
+
+# About Us
+def aboutUs(request):
+    return render(request, 'researcher\\aboutUs.html')
+
+# Contact Us
+def contactUs(request):
+    return render(request, 'researcher\contactUs.html')
+
+# User Settings
+def icon(request):
+    return render(request, 'researcher\icon.html') 
+
+# Success
+def successful(request):
+        return render(request, 'researcher\successful.html') 
+# Pass    
+def changePass(request):
+    if request.method == 'POST':
+        password = request.POST['password']
+        new_pass = request.POST['new_pass']
+        confnew_pass = request.POST['confnew_pass']
+        
+        if Researcher.objects.filter(password=password).exists():
+            if new_pass == confnew_pass:
+                # Get the first Researcher object with the given password
+                researcher = Researcher.objects.filter(password=password).first()
+                # Update the password field
+                researcher.password = new_pass
+                # Save the changes to the database
+                researcher.save()
+                
+                messages.success(request, 'You successfully change your password. You can now login again.')
+                return render(request, 'researcher/changePass.html')
+            else:
+                messages.error(request, 'Password and Confirm Password do not match. Please try again.')  
+        else:
+            messages.error(request, 'Old Password is incorrect. Please try again.')               
+    # Return the newPass.html template for GET requests
+    return render(request, 'researcher/changePass.html')
 
 # Submit Manuscript Pages
 def submit_bscReq(request):
@@ -179,13 +219,13 @@ def forgotPass(request):
 def codeVerify(request):
     return render(request, 'codeVerify.html')
 # Forgot-Password/Change-Password Page
-def changePass(request):
+def newPass(request):
     if request.method == 'POST':
         new_pass = request.POST['new_pass']
         confirm_new_pass = request.POST['confirm_new_pass']
         if new_pass == confirm_new_pass:
             messages.success(request, 'You successfully change your password. You can now login.')
-            return render(request, 'changePass.html')
+            return render(request, 'newPass.html')
         else:
             messages.error(request, 'Password and Confirm Password do not match. Please try again.')
-    return render(request, 'changePass.html')
+    return render(request, 'newPass.html')
