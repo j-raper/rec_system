@@ -37,63 +37,63 @@
   </div>
   <div class="form_container">
   {% include 'RECSystem/includes/message.html' %}
-    <form action="#" method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-        <div class="form_section">
-          <div class="files_container">
-              <p>For Research with Human Participants</p>
-              <div class="file_box">
-                <label for="curriculum_vitae">Updated Curriculum Vitae (CV) of the Adviser(s) and Researcher(s) <br></label>
-                <input type="file" name="curriculum_vitae" id="input_file" required>
-              </div>
-              <div class="file_box">
-                <label for="research_agenda">Updated Research Agenda of the Program <br></label>
-                <input type="file" name="research_agenda" id="input_file" required>
-              </div>
-              <div class="file_box">
-                <label for="grades">Grades <br></label>
-                <input type="file" name="grades" id="input_file" required>
-              </div>
-          </div>
-          <div class="upload_container">
-              <p id="forms">Forms</p>
-              <div class="file_box_upload">
-                <label for="REC_FO_OO23">REC_FO_OO23</label>
-                <input type="file" name="REC_FO_OO23" id="input_file" required>
-              </div>
-              <div class="file_box_upload">
-                <label for="REC_FO_OO24">REC_FO_OO24</label>
-                <input type="file" name="REC_FO_OO24" id="input_file" required>
-              </div>
-              <div class="file_box_upload">
-                <label for="REC_FO_OO25">REC_FO_OO25</label>
-                <input type="file" name="REC_FO_OO25" id="input_file" required>
-              </div>
-              <div class="file_box_upload">
-                <label for="REC_FO_OO26">REC_FO_OO26</label>
-                <input type="file" name="REC_FO_OO26" id="input_file" required>
-              </div>
-              <div class="file_box_upload">
-                  <label for="REC_FO_OO27">REC_FO_OO27</label>
-                  <input type="file" name="REC_FO_OO27" id="input_file" required>
-              </div>
-              <div class="file_box_upload">
-                  <label for="REC_FO_OO57">REC_FO_OO57</label>
-                  <input type="file" name="REC_FO_OO57" id="input_file" required>
-              </div>
-              <div class="file_box_upload">
-                  <label for="REC_FO_OO57B">REC_FO_OO57B</label>
-                  <input type="file" name="REC_FO_OO57B" id="input_file" required>
-              </div>
-              <div class="file_box_upload">
-                  <label for="REC_FO_OO58">REC_FO_OO58</label>
-                  <input type="file" name="REC_FO_OO58" id="input_file" required>
-              </div>
-              <div class="button">
-                <button class="submit" type="submit">Submit for review</button>
-              </div>
+      <div class="form_section">
+        <div class="files_container">
+            <p>For Research with Human Participants</p>
+            <div class="file_box">
+              <label for="curriculum_vitae">Updated Curriculum Vitae (CV) of the Adviser(s) and Researcher(s) <br></label>
+              <input type="file" name="curriculum_vitae" id="input_file" required>
+            </div>
+            <div class="file_box">
+              <label for="research_agenda">Updated Research Agenda of the Program <br></label>
+              <input type="file" name="research_agenda" id="input_file" required>
+            </div>
+            <div class="file_box">
+              <label for="grades">Grades <br></label>
+              <input type="file" name="grades" id="input_file" required>
             </div>
         </div>
+        <div class="upload_container">
+            <p id="forms">Forms</p>
+            <div class="file_box_upload">
+              <label for="REC_FO_OO23">REC_FO_OO23</label>
+              <input type="file" name="REC_FO_OO23" id="input_file" required>
+            </div>
+            <div class="file_box_upload">
+              <label for="REC_FO_OO24">REC_FO_OO24</label>
+              <input type="file" name="REC_FO_OO24" id="input_file" required>
+            </div>
+            <div class="file_box_upload">
+              <label for="REC_FO_OO25">REC_FO_OO25</label>
+              <input type="file" name="REC_FO_OO25" id="input_file" required>
+            </div>
+            <div class="file_box_upload">
+              <label for="REC_FO_OO26">REC_FO_OO26</label>
+              <input type="file" name="REC_FO_OO26" id="input_file" required>
+            </div>
+            <div class="file_box_upload">
+                <label for="REC_FO_OO27">REC_FO_OO27</label>
+                <input type="file" name="REC_FO_OO27" id="input_file" required>
+            </div>
+            <div class="file_box_upload">
+                <label for="REC_FO_OO57">REC_FO_OO57</label>
+                <input type="file" name="REC_FO_OO57" id="input_file" required>
+            </div>
+            <div class="file_box_upload">
+                <label for="REC_FO_OO57B">REC_FO_OO57B</label>
+                <input type="file" name="REC_FO_OO57B" id="input_file" required>
+            </div>
+            <div class="file_box_upload">
+                <label for="REC_FO_OO58">REC_FO_OO58</label>
+                <input type="file" name="REC_FO_OO58" id="input_file" required>
+            </div>
+            <div class="button">
+              <button class="submit" type="submit">Submit for review</button>
+            </div>
+          </div>
+      </div>
     </form>
   </div>
 </body>

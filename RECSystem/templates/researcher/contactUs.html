@@ -30,24 +30,25 @@
       <h1>Contact Us</h1>
       {% include 'RECSystem/includes/message.html' %}
         <form method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
           <div class="form_section">
+            {% csrf_token %}
             <div class="input_container">
               <div class="input_box">
                   <label for="your-name">Your Name:<br></label>
-                  <input type="text" class="input">
+                  <input type="text" class="input" required>
               </div>
               <div class="input_box">
                 <label for="your-name">Your Email Address:<br></label>
-                <input type="text" class="input">
+                <input type="email" class="input" required>
               </div>
               <div class="input_box">
                 <label for="your-name">Subject:<br></label>
-                <input type="text" class="input">
+                <input type="text" class="input" required>
               </div>
               <div class="input_box">
                 <label for="leave-message">Leave Message:</label>
-                <textarea name="leave-message" id="textarea" cols="30" rows="10" spellcheck="false" required="" style="width: 465px; height: 96px;"></textarea>              </div>
+                <textarea name="leave-message" id="textarea" cols="30" rows="10" spellcheck="false" required="" style="width: 465px; height: 96px;"></textarea>              
+              </div>
               <div class="button">
                 <input class="submit" type="submit" value="Submit">
               </div>

@@ -99,7 +99,7 @@ def submit_bscReq(request):
                                   revised_copy=revised_copy, 
                                   routing_form=routing_form, 
                                   adviser_edorsement=adviser_edorsement)
-    
+        
         messages.success(request, 'You successfully submitted your Basic Requirements. You can now proceed to REC Requirements.')
     return render(request, 'researcher\submit_bscReq.html')
 
@@ -140,6 +140,7 @@ def submit_recReq(request):
                                   REC_FO_OO57=REC_FO_OO57, 
                                   REC_FO_OO57B=REC_FO_OO57B, 
                                   REC_FO_OO58=REC_FO_OO58)
+        
         messages.success(request, 'You successfully submitted your REC Requirements. You can now proceed to Payment.')
     return render(request, 'researcher\submit_recReq.html')
 
@@ -150,6 +151,7 @@ def submit_payment(request):
         handle_uploaded_file(payment)
 
         Researcher.objects.update(payment=payment)
+
         messages.success(request, 'You successfully submitted your Proof of Payment.')
     return render(request, 'researcher\submit_payment.html')
 
