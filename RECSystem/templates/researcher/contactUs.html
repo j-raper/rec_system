@@ -1,60 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UIC REC - Contact Us</title>
-
-    <link rel="stylesheet" href="../../static/css/researcher/contactUs.css">
-</head>
-
-<!-- contact us section start -->
-{% load static %}
-<body>
-  <header>
-    <div class="header">
-        <nav class="navbar">
-            <a href="{% url 'home' %}" class="menus">Home</a>
-            <a href="{% url 'aboutUs' %}" class="menus">About</a>
-            <a href="{% url 'contactUs' %}" class="menus" id="cntctUs">Contact<span>Us</span></a>
-        </nav>
-        <div class="icons">
-            <a href="{% url 'icon' %}">
-                <img src="../static/images/user-icon.png" alt="" id="icons">
-            </a>
-        </div>
-    </div>
-</header>
-    <div class="form_container">
-      <h1>Contact Us</h1>
-      {% include 'RECSystem/includes/message.html' %}
-        <form method="POST" enctype="multipart/form-data">
-          <div class="form_section">
-            {% csrf_token %}
-            <div class="input_container">
-              <div class="input_box">
-                  <label for="your-name">Your Name:<br></label>
-                  <input type="text" class="input" required>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../static/css/researcher/contactUs.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+      </head>
+      <body>
+        <header>
+          <div class="header">
+              <nav class="navbar">
+                  <a href="{% url 'home' %}" class="menus">Home</a>
+                  <a href="{% url 'aboutUs' %}" class="menus">About</a>
+                  <a href="{% url 'contactUs' %}" class="menus" id="cntctUs">Contact<span>Us</span></a>
+              </nav>
+              <div class="icons">
+                  <a href="{% url 'icon' %}">
+                      <img src="../static/images/user-icon.png" alt="" id="icons">
+                  </a>
               </div>
-              <div class="input_box">
-                <label for="your-name">Your Email Address:<br></label>
-                <input type="email" class="input" required>
-              </div>
-              <div class="input_box">
-                <label for="your-name">Subject:<br></label>
-                <input type="text" class="input" required>
-              </div>
-              <div class="input_box">
-                <label for="leave-message">Leave Message:</label>
-                <textarea name="leave-message" id="textarea" cols="30" rows="10" spellcheck="false" required="" style="width: 465px; height: 96px;"></textarea>              
-              </div>
-              <div class="button">
-                <input class="submit" type="submit" value="Submit">
-              </div>
-            </div>
           </div>
-        </form>
-    </div>
-</body>
-</html>
+      </header>
+        <div class="contact-info">
+          <div class="card">
+            <i class="card-icon far fa-envelope"></i>
+            <p>rec@uic.edu.ph</p>
+          </div>
+    
+          <div class="card">
+            <i class="card-icon fas fa-phone"></i>
+            <p>(82) 221.80.90</p>
+          </div>
+    
+          <div class="card">
+            <i class="card-icon fas fa-map-marker-alt"></i>
+            <p>University of the Immaculate Conception, Fr. Selga St</p>
+          </div>
+        </div>
+      </body>
+    </html>

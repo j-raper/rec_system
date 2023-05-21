@@ -1,17 +1,89 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: "montserrat",sans-serif;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 body{
+  min-height: 110vh;
+  align-items: center;
+  justify-content: center;
   background: url("/static/images/uic-background.jpg") fixed;
-  height: 100%;
-  background-position: center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.contact-info{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.card{
+  background: whitesmoke;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid lightslategray;
+  border-radius: 6px;
+
+}
+
+.card-icon{
+  font-size: 28px;
+  background: #FF74B1;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+  background: none;
+  color: #FF74B1;
+  transform: scale(1.6);
+}
+
+.card p{
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:800px) {
+  .contact-info{
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
 }
 .header{
   background-color:#CD104D;
@@ -46,119 +118,6 @@ body{
   font-size: 22px;
   margin-left: 2rem;
 }
-.container{
-  position: fixed;
-  top: 100px;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  height: 90px;
-}
-.container span{
-  font-weight: bolder;
-}
-.form_container{
-  position: fixed;
-  top: 160px;
-  align-items: center;
-  border-radius: 6px;
-  justify-content: space-between;
-  border: 1px solid lightslategray;
-  background-color: whitesmoke;
-  height: 70%;
-  padding-top: 1%;
-}
-.form_container .input_box{
-  height: 30px;
-  width: 100%;
-  margin: 16px 0;
-  position: relative;
-}
-.form_container .input_box input{
-  height: 40px;
-  width: 70%;
-  border-radius: 6px;
-  font-size: 16px;
-  outline: none;
-  padding-left: 15px;
-  background-color: #fff;
-  border: 2px solid lightslategray;
-  transition: all 0.3s ease;
-  margin-left: 198px;
-}
-.form_container .input_box label{
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  font-size: 16px;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-form > .form_section {
-  display: flex;
-  flex-direction: row;
-}
-form > .form_section .input_container,
-form > .form_section .files_container {
-  padding: 1.3rem;
-}
-
-form > .form_section .files_container {
-  display: table-row-group;
-  align-items: center;
-  padding: 70px;
-}
-p{
-  text-align: center;
-  letter-spacing: 1px;  
-  font-size: 45px;
-  margin-bottom: 20px;
-  color: #000000;
-}
-.input_box #textarea {
-  width: 473px;
-  height: 156px;
-  border-radius: 6px;
-  font-size: 16px;
-  outline: none;
-  padding-left: 15px;
-  background-color: #fff;
-  border: 2px solid lightslategray;
-  transition: all 0.3s ease;
-  margin-left: 197px;
-  margin-top: 5px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 15px;
-}
-.submit{
-  display: inline-block;
-  padding: 7px 77px;
-  border: 0.2rem solid #FCD1D1;
-  background-color: #B91646;
-  color: #fff;
-  font-weight: bolder;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  margin-top: 85px;
-  width: 100%;
-}
-.submit:hover{
-  background-color: #FCD1D1;
-  border: 0.2rem solid #B91646;
-  color: #B91646;
-}
-h1{
-  margin-top: 15px;
-  margin-left: 40px;
-  font-size: 35px;
-  color: #e35b89;
-  font-weight: bold;
+#cntctUs span{
+  margin-left: 10px;
 }

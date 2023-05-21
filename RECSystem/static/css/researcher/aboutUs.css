@@ -119,10 +119,6 @@ p{
     margin-top: -50px;
     color: #000000;
 }
-span{
-    font-weight: 900;
-    font-family: sans-serif;
-}
 .input_box #textarea {
     width: 473px;
     height: 156px;
@@ -166,4 +162,7 @@ h1{
     font-size: 35px;
     color: #e35b89;
     font-weight: bold;
+}
+#cntctUs span{
+    margin-left: 10px;
 }

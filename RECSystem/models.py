@@ -18,7 +18,7 @@ class Researcher(models.Model):
     #basic requirements
     protocol_title = models.CharField(max_length=100, verbose_name='Research Title')
     principal_investigator = models.TextField(max_length=1000, verbose_name='Principal Investigator/s')
-    minutes_of_proposal = models.FileField(upload_to="media/", verbose_name="Minutes of Proposal Defense")
+    protocol_title = models.FileField(max_length=100, verbose_name='Research Title')
     revised_copy = models.FileField(upload_to="media/", verbose_name="Revised Copy")
     routing_form = models.FileField(upload_to="media/", verbose_name="Routing Form")
     adviser_edorsement = models.FileField(upload_to="media/", verbose_name="Adviser's Endorsement for Ethics Review")

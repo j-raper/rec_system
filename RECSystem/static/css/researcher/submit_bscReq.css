@@ -87,7 +87,6 @@ li .active{
     display: flex;
     align-items: center;
     height: 90px;
-    pointer-events: none;
 }
 .container span{
     font-weight: bolder;

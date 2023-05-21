@@ -6,6 +6,7 @@ from django.urls import path
 from django.contrib import admin
 from django.contrib.auth import authenticate, login
 from django.db import IntegrityError
+from django.contrib.auth.hashers import make_password, check_password
 
 # Start view function/model
 # Request handler
@@ -187,7 +188,7 @@ def createAcc(request):
                 researcher = Researcher()
                 researcher.username=request.POST.get('username')
                 researcher.email=request.POST.get('email')
-                researcher.password=request.POST.get('confirm_pass')
+                researcher.password=make_password(request.POST['confirm_pass'])
                 researcher.school=request.POST.get('school')
                 researcher.level=request.POST.get('level')
                 researcher.save()

@@ -26,15 +26,6 @@ SECRET_KEY = 'django-insecure-9grjpd-rfzp=&n(!l-w8sv*d**=qly14y-@l=nb)n08c8t7_8b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# EMAIL_HOST = 'jraper_2000000000@uic.edu.ph'
-# EMAIL_HOST_USER = 'jraper_2000000000@uic.edu.ph'
-
-
-
-
-
-
-
 ALLOWED_HOSTS = []
 
 
